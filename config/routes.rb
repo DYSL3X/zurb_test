@@ -1,14 +1,20 @@
 ZurbTest::Application.routes.draw do
-  get "pages/precio"
-  get "pages/como_funciona"
-  get "pages/contacto"
-  get "pages/entrar"
-  get "pages/registro"
+
+  root 'pages#inicio'
+
+  
+
+  get '/precio', :to => "pages#precio"
+  get '/como_funciona', :to => "pages#como_funciona"
+  get '/contacto', :to => "pages#contacto"
+  get '/entrar', :to => "pages#entrar"
+  get '/registro', :to => "pages#registro"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
